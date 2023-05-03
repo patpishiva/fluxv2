@@ -29,3 +29,17 @@ spec:
       - image: nginx
         name: nginx
         resources: {}
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  creationTimestamp: null
+  name: test
+  namespace: test
+rules:
+- apiGroups:
+  - ""
+  resources:
+  - pods
+  verbs:
+  - get
